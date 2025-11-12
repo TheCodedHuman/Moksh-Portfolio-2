@@ -1,6 +1,6 @@
 # Moksh's Portfolio ⚔️
 
-## 🚀 Live Link:  [Click me!]().
+## 🚀 Live Link:  [Click me!](https://moksh-portfolio-2.vercel.app/).
 
 Welcome to my personal portfolio — a single-page scroll crafted with clarity, minimalism, and tactical precision. This site showcases my journey as a mentor, sovereign seeker, and ritual tactician in Python and AI/ML.
 
