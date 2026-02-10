@@ -5,15 +5,16 @@
 const menu = document.querySelector(".menu");
 const navLinks = document.querySelector(".nav-links");
 const grid = document.querySelector(".projects-grid");
+const certificatesGrid = document.querySelector(".certificates-grid");
 const timeLineContainer = document.querySelector(".timeline");
 
 // Literal-Intel
 const projects = [
     {
-        title: "Healthy Programmer App",
-        description: "A Tkinter-based wellness tracker for coders.",
-        image: "stash/healthy.png",
-        link: "https://github.com/thecodedhuman/healthy-programmer"
+        title: "Kivy Formatter",
+        description: "A Dev-Tool for Kivy Developers",
+        image: "https://res.cloudinary.com/dbjhbabjd/image/upload/v1770741879/github_banner_usljrc.jpg",
+        link: "https://github.com/TheCodedHuman/Kivy-Formatter"
     },
     {
         title: "KartavyaFEED",
@@ -26,6 +27,27 @@ const projects = [
         description: "Arduino and Sensor Based IoT Project",
         image: "https://res.cloudinary.com/dbjhbabjd/image/upload/v1763019167/banner_bpfqbs.png",
         link: "https://github.com/TheCodedHuman/Minor_2-Line_Follower_Bot"
+    }
+];
+
+const certificates = [
+    {
+        title: "Full-Stack Web Development",
+        issuer: "GrowthSquare",
+        date: "3rd November 2025",
+        link: "https://drive.google.com/file/d/1FKYzlQoGxYQZLTqoIxeO06jY4YfBaQnb/view"
+    },
+    {
+        title: "Computer Proficiency Certification Test",
+        issuer: "State Government",
+        date: "16th March 2024",
+        link: "https://drive.google.com/file/d/1G7ANGde5bgutuGyB6RurwL2DzwFhUox2/view"
+    },
+    {
+        title: "Python For Beginners",
+        issuer: "Simplilearn",
+        date: "21st December 2023",
+        link: "https://drive.google.com/file/d/1Csdi-dMVIMS0q93F6tZMk6-fk_2qHOMa/view"
     }
 ];
 
@@ -87,6 +109,19 @@ projects.forEach(project => {
         <a href=${project.link} target="_blank" class="project-link">View Project</a>
     `;
     grid.appendChild(card);
+});
+
+certificates.forEach(cert => {
+    
+    const card = document.createElement("div");
+    card.className = "certificate-card";
+    card.innerHTML = `
+        <h3>${cert.title}</h3>
+        <p class="issuer">Issued by: <strong>${cert.issuer}</strong></p>
+        <p class="cert-date">${cert.date}</p>
+        <a href=${cert.link} target="_blank" class="cert-link">View Certificate</a>
+    `;
+    certificatesGrid.appendChild(card);
 });
 
 timeLineData.forEach(item => {
